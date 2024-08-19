@@ -46,7 +46,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <a
-            href="/"
+            href="#HERO"
             className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
           >
             Home
