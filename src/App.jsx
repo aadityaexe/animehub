@@ -4,7 +4,12 @@ import Navbar from "./Component/navbar/Navbar";
 function App() {
   return (
     <>
-      <Navbar />
+      <div
+        className="font-serif
+"
+      >
+        <Navbar />
+      </div>
     </>
   );
 }
