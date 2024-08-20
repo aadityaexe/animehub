@@ -1,173 +1,104 @@
-import React, { useState } from "react";
-import g1 from "./Gallery-assets/g1.png";
-import g2 from "./Gallery-assets/g2.jpg";
-import g3 from "./Gallery-assets/g3.jpg";
-import g4 from "./Gallery-assets/g4.jpg";
-import g5 from "./Gallery-assets/g5.jpg";
-import g6 from "./Gallery-assets/g6.jpg";
-import g7 from "./Gallery-assets/g7.jpg";
-import g8 from "./Gallery-assets/g8.jpg";
-import g9 from "./Gallery-assets/g9.jpg";
-import g10 from "./Gallery-assets/g10.jpg";
-import g11 from "./Gallery-assets/g11.png";
-import g12 from "./Gallery-assets/g12.jpg";
-import g13 from "./Gallery-assets/g13.jpg";
-import g14 from "./Gallery-assets/g14.jpg";
-import g15 from "./Gallery-assets/g15.jpg";
-import g16 from "./Gallery-assets/g16.jpg";
-import g17 from "./Gallery-assets/g17.jpg";
-import g18 from "./Gallery-assets/g18.jpg";
-import g19 from "./Gallery-assets/g19.jpg";
-import g20 from "./Gallery-assets/g20.jpg";
-import g21 from "./Gallery-assets/g21.jpg";
+import { useState } from "react";
+import Catwoman2 from "./Gallery-assets/Catwoman 2.jpg";
+import Catwoman from "./Gallery-assets/Catwoman.jpg";
+import Esdeath from "./Gallery-assets/Esdeath.jpg";
+import Esdeath2 from "./Gallery-assets/Esdeath__2.jpg";
+import Hinata2 from "./Gallery-assets/Hinata 2.jpg";
+import Hinata from "./Gallery-assets/Hinata.jpg";
+import IkumiMito1 from "./Gallery-assets/Ikumi Mito-2.jpg";
+import IkumiMito from "./Gallery-assets/Ikumi Mito_.jpg";
+import MaiSakurajima2 from "./Gallery-assets/Mai Sakurajima 2.jpg";
+import MaiSakurajima from "./Gallery-assets/Mai Sakurajima.jpg";
+import MakiOze from "./Gallery-assets/Maki Oze__.jpg";
+import MakiOze2 from "./Gallery-assets/Maki Oze__2.jpg";
+import Mirko2 from "./Gallery-assets/Mirko 2.jpg";
+import Mirko from "./Gallery-assets/Mirko.jpg";
+import Morgiana from "./Gallery-assets/Morgiana.jpg";
+import MorgianaNotNormal from "./Gallery-assets/Morgiana__notnormal.jpg";
+import Raphtalia from "./Gallery-assets/Raphtalia__.jpg";
+import Raphtalia2 from "./Gallery-assets/Raphtalia__2.jpg";
+import Rem2 from "./Gallery-assets/Rem 2.jpg";
+import Rem from "./Gallery-assets/Rem.jpg";
+import RiasGremory from "./Gallery-assets/Rias Gremory_.jpg";
+import RiasGremory2 from "./Gallery-assets/Rias Gremory_2.jpg";
 
 const images = [
   {
-    src: g1,
-    hoverSrc: g2,
-    alt: "Gallery photo 1",
-    name: "Anime Name 1",
-    about: "Description of Anime 1",
+    src: Catwoman,
+    hoverSrc: Catwoman2,
+    alt: "Catwoman",
+    name: "Catwoman",
+    about: "Description of Catwoman",
   },
   {
-    src: g2,
-    hoverSrc: g3,
-    alt: "Gallery photo 2",
-    name: "Anime Name 2",
-    about: "Description of Anime 2",
+    src: Esdeath,
+    hoverSrc: Esdeath2,
+    alt: "Esdeath",
+    name: "Esdeath",
+    about: "Description of Esdeath",
   },
   {
-    src: g3,
-    hoverSrc: g4,
-    alt: "Gallery photo 3",
-    name: "Anime Name 3",
-    about: "Description of Anime 3",
+    src: Hinata,
+    hoverSrc: Hinata2,
+    alt: "Hinata",
+    name: "Hinata",
+    about: "Description of Hinata",
   },
   {
-    src: g4,
-    hoverSrc: g5,
-    alt: "Gallery photo 4",
-    name: "Anime Name 4",
-    about: "Description of Anime 4",
+    src: IkumiMito,
+    hoverSrc: IkumiMito1,
+    alt: "Ikumi Mito",
+    name: "Ikumi Mito",
+    about: "Description of Ikumi Mito",
   },
   {
-    src: g5,
-    hoverSrc: g6,
-    alt: "Gallery photo 5",
-    name: "Anime Name 5",
-    about: "Description of Anime 5",
+    src: MaiSakurajima,
+    hoverSrc: MaiSakurajima2,
+    alt: "Mai Sakurajima",
+    name: "Mai Sakurajima",
+    about: "Description of Mai Sakurajima",
   },
   {
-    src: g6,
-    hoverSrc: g7,
-    alt: "Gallery photo 6",
-    name: "Anime Name 6",
-    about: "Description of Anime 6",
+    src: MakiOze,
+    hoverSrc: MakiOze2,
+    alt: "Maki Oze",
+    name: "Maki Oze",
+    about: "Description of Maki Oze",
   },
   {
-    src: g7,
-    hoverSrc: g8,
-    alt: "Gallery photo 7",
-    name: "Anime Name 7",
-    about: "Description of Anime 7",
+    src: Mirko,
+    hoverSrc: Mirko2,
+    alt: "Mirko",
+    name: "Mirko",
+    about: "Description of Mirko",
   },
   {
-    src: g8,
-    hoverSrc: g9,
-    alt: "Gallery photo 8",
-    name: "Anime Name 8",
-    about: "Description of Anime 8",
+    src: Morgiana,
+    hoverSrc: MorgianaNotNormal,
+    alt: "Morgiana",
+    name: "Morgiana",
+    about: "Description of Morgiana",
   },
   {
-    src: g9,
-    hoverSrc: g10,
-    alt: "Gallery photo 9",
-    name: "Anime Name 9",
-    about: "Description of Anime 9",
+    src: Raphtalia,
+    hoverSrc: Raphtalia2,
+    alt: "Raphtalia",
+    name: "Raphtalia",
+    about: "Description of Raphtalia",
   },
   {
-    src: g10,
-    hoverSrc: g11,
-    alt: "Gallery photo 10",
-    name: "Anime Name 10",
-    about: "Description of Anime 10",
+    src: Rem,
+    hoverSrc: Rem2,
+    alt: "Rem",
+    name: "Rem",
+    about: "Description of Rem",
   },
   {
-    src: g11,
-    hoverSrc: g12,
-    alt: "Gallery photo 11",
-    name: "Anime Name 11",
-    about: "Description of Anime 11",
-  },
-  {
-    src: g12,
-    hoverSrc: g13,
-    alt: "Gallery photo 12",
-    name: "Anime Name 12",
-    about: "Description of Anime 12",
-  },
-  {
-    src: g13,
-    hoverSrc: g14,
-    alt: "Gallery photo 13",
-    name: "Anime Name 13",
-    about: "Description of Anime 13",
-  },
-  {
-    src: g14,
-    hoverSrc: g15,
-    alt: "Gallery photo 14",
-    name: "Anime Name 14",
-    about: "Description of Anime 14",
-  },
-  {
-    src: g15,
-    hoverSrc: g16,
-    alt: "Gallery photo 15",
-    name: "Anime Name 15",
-    about: "Description of Anime 15",
-  },
-  {
-    src: g16,
-    hoverSrc: g17,
-    alt: "Gallery photo 16",
-    name: "Anime Name 16",
-    about: "Description of Anime 16",
-  },
-  {
-    src: g17,
-    hoverSrc: g18,
-    alt: "Gallery photo 17",
-    name: "Anime Name 17",
-    about: "Description of Anime 17",
-  },
-  {
-    src: g18,
-    hoverSrc: g19,
-    alt: "Gallery photo 18",
-    name: "Anime Name 18",
-    about: "Description of Anime 18",
-  },
-  {
-    src: g19,
-    hoverSrc: g20,
-    alt: "Gallery photo 19",
-    name: "Anime Name 19",
-    about: "Description of Anime 19",
-  },
-  {
-    src: g20,
-    hoverSrc: g21,
-    alt: "Gallery photo 20",
-    name: "Anime Name 20",
-    about: "Description of Anime 20",
-  },
-  {
-    src: g21,
-    hoverSrc: g1,
-    alt: "Gallery photo 21",
-    name: "Anime Name 21",
-    about: "Description of Anime 21",
+    src: RiasGremory,
+    hoverSrc: RiasGremory2,
+    alt: "Rias Gremory",
+    name: "Rias Gremory",
+    about: "Description of Rias Gremory",
   },
 ];
 
@@ -180,18 +111,18 @@ const Gallery = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div
-        className={`grid grid-cols-2 gap-4 md:grid-cols-4 ${
-          showAll ? "grid-rows-5" : "grid-rows-2"
-        }`}
-      >
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {images.slice(0, showAll ? images.length : 8).map((image, index) => (
           <div
             key={index}
-            className="relative aspect-w-1 aspect-h-1 overflow-hidden group"
+            className={`relative overflow-hidden group ${
+              index % 3 === 0
+                ? "col-span-2 row-span-2"
+                : "col-span-1 row-span-1"
+            }`}
           >
             <img
-              className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg"
+              className="object-cover rounded-lg transition-transform duration-300 group-hover:opacity-0"
               src={image.src}
               alt={image.alt}
             />
